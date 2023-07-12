@@ -1,0 +1,277 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "max-len": [
+          "error",
+          { "ignoreStrings": true, "ignoreComments": true, "ignoreTemplateLiterals": true, "code": 120, "tabWidth": 2 }
+        ],
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component"]
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/no-host-metadata-property": "error",
+        "@angular-eslint/no-input-rename": "error",
+        "@angular-eslint/no-inputs-metadata-property": "error",
+        "@angular-eslint/no-output-on-prefix": "off",
+        "@angular-eslint/no-output-rename": "error",
+        "@angular-eslint/no-outputs-metadata-property": "error",
+        "@angular-eslint/use-lifecycle-interface": "error",
+        "@angular-eslint/use-pipe-transform-interface": "error",
+        "@typescript-eslint/ban-types": ["error"],
+        "@typescript-eslint/consistent-type-assertions": ["off"],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "overrides": {
+              "constructors": "off"
+            }
+          }
+        ],
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true
+          }
+        ],
+        "@typescript-eslint/prefer-for-of": ["off"],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "memberLike",
+            "modifiers": ["private"],
+            "format": ["camelCase"],
+            "leadingUnderscore": "forbid"
+          },
+          {
+            "selector": "interface",
+            "format": ["PascalCase"],
+            "custom": {
+              "regex": "^I[A-Z]",
+              "match": false
+            }
+          }
+        ],
+        "@typescript-eslint/no-unused-expressions": [
+          "error",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true
+          }
+        ],
+        "@typescript-eslint/quotes": ["error", "single"],
+        "@typescript-eslint/prefer-function-type": "error",
+        "@typescript-eslint/no-misused-new": "error",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "@typescript-eslint/no-inferrable-types": [
+          "error",
+          {
+            "ignoreParameters": true
+          }
+        ],
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-empty-interface": "error",
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/unified-signatures": "error",
+        "@typescript-eslint/no-shadow": ["error"],
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "classes": [
+              "signature",
+
+              "public-decorated-get",
+              "public-decorated-set",
+
+              "public-decorated-field",
+              "protected-decorated-field",
+              "private-decorated-field",
+
+              "public-instance-field",
+              "protected-instance-field",
+              "private-instance-field",
+
+              "public-abstract-field",
+              "protected-abstract-field",
+              "private-abstract-field",
+
+              "public-field",
+              "protected-field",
+              "private-field",
+
+              "static-field",
+              "instance-field",
+              "abstract-field",
+
+              "decorated-field",
+
+              "field",
+
+              "static-initialization",
+
+              "public-constructor",
+              "protected-constructor",
+              "private-constructor",
+              "constructor",
+
+              "public-static-get",
+              "protected-static-get",
+              "private-static-get",
+
+              "public-decorated-get",
+              "protected-decorated-get",
+              "private-decorated-get",
+
+              "public-instance-get",
+              "protected-instance-get",
+              "private-instance-get",
+
+              "public-abstract-get",
+              "protected-abstract-get",
+              "private-abstract-get",
+
+              "public-get",
+              "protected-get",
+              "private-get",
+
+              "static-get",
+              "instance-get",
+              "abstract-get",
+
+              "decorated-get",
+
+              "get",
+
+              "public-static-set",
+              "protected-static-set",
+              "private-static-set",
+
+              "public-decorated-set",
+              "protected-decorated-set",
+              "private-decorated-set",
+
+              "public-instance-set",
+              "protected-instance-set",
+              "private-instance-set",
+
+              "public-abstract-set",
+              "protected-abstract-set",
+              "private-abstract-set",
+
+              "public-set",
+              "protected-set",
+              "private-set",
+
+              "static-set",
+              "instance-set",
+              "abstract-set",
+
+              "decorated-set",
+
+              "set",
+
+              "public-static-method",
+              "protected-static-method",
+              "private-static-method",
+
+              "public-decorated-method",
+              "protected-decorated-method",
+              "private-decorated-method",
+
+              "public-instance-method",
+              "protected-instance-method",
+              "private-instance-method",
+
+              "public-abstract-method",
+              "protected-abstract-method",
+              "private-abstract-method",
+
+              "public-method",
+              "protected-method",
+              "private-method",
+
+              "static-method",
+              "instance-method",
+              "abstract-method",
+
+              "decorated-method",
+
+              "method"
+            ]
+          }
+        ],
+        "prefer-arrow/prefer-arrow-functions": ["off"],
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": false }],
+        "arrow-body-style": ["warn", "as-needed"],
+        "arrow-parens": ["error", "always"],
+        "constructor-super": "error",
+        "curly": "error",
+        "eqeqeq": ["error", "smart"],
+        "guard-for-in": "error",
+        "id-blacklist": "off",
+        "id-match": "off",
+        "no-bitwise": "error",
+        "no-caller": "error",
+        "no-debugger": "error",
+        "no-empty": "off",
+        "no-eval": "error",
+        "no-fallthrough": "error",
+        "no-new-wrappers": "error",
+        "no-restricted-imports": ["error", "rxjs/Rx"],
+        "no-throw-literal": "off",
+        "no-undef-init": "error",
+        "no-underscore-dangle": "off",
+        "no-var": "error",
+        "prefer-const": "error",
+        "radix": "error"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/template/no-negated-async": "off"
+      }
+    }
+  ]
+}

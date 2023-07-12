@@ -1,0 +1,21 @@
+{
+  "singleQuote": true,
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "bracketSpacing": true,
+  "requirePragma": false,
+  "insertPragma": false,
+  "proseWrap": "preserve",
+  "htmlWhitespaceSensitivity": "ignore",
+  "endOfLine": "lf",
+  "trailingComma": "all",
+  "attributeGroups": [
+    "$ANGULAR_STRUCTURAL_DIRECTIVE",
+    "^(id|name)$", "^class$", "$DEFAULT", "^aria-",
+    "$ANGULAR_INPUT",
+    "$ANGULAR_TWO_WAY_BINDING",
+    "$ANGULAR_OUTPUT"
+  ]
+}
