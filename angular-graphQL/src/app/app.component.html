@@ -301,10 +301,15 @@
       visibility: hidden;
     }
   }
+  .button {
+    width: 100px;
+    height: 40px;
+  }
 </style>
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
+  <button (click)="update()">CLICK</button>
   <img
     width="40"
     alt="Angular Logo"
