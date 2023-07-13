@@ -1,6 +1,6 @@
-import { RESTDataSource } from "@apollo/datasource-rest";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
+import { FactAPI } from "./api/index";
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
@@ -82,11 +82,3 @@ const { url } = await startStandaloneServer(server, {
 });
 
 console.log(`🚀  Server ready at: ${url}`);
-
-class FactAPI extends RESTDataSource {
-  override baseURL = "https://catfact.ninja";
-
-  async getFact(id: string): Promise<any> {
-    return this.get<any>(`fact`);
-  }
-}
