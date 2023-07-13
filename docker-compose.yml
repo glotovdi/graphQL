@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  graphql:
+    #from custom image
+    build: ./graphql-server
+    image: graphql-server-image
+    container_name: graphql-server
+    ports:
+      - "4000:4000"
